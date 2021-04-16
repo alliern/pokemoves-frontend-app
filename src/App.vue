@@ -4,6 +4,8 @@
       <router-link to="/">Home</router-link>
       |
       <router-link to="/pokemon">All Pokemon</router-link>
+      |
+      <router-link to="/moves">All Moves</router-link>
     </div>
     <router-view />
   </div>
