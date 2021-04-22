@@ -1,9 +1,11 @@
 <template>
   <div class="pokemon-index">
+    <h1>All Pokemon:</h1>
     <div v-for="pokemon in pokemons" v-bind:key="pokemon.id">
-      <h1>All Pokemon:</h1>
-      <h2>{{ pokemon.region }}ian {{ pokemon.name }}</h2>
-      <!-- <p>Region: {{ pokemon.region }}</p> -->
+      <h2 v-if="pokemon.region == 'Galar'">{{ pokemon.name }} ({{ pokemon.region }}ian)</h2>
+      <h2 v-else-if="pokemon.region == 'Alola'">{{ pokemon.name }} ( {{ pokemon.region }}n)</h2>
+      <h2 v-else>{{ pokemon.name }}</h2>
+      <!-- <p v-if="pokemon.region != 'Kanto'">Region: {{ pokemon.region }}</p> -->
       <router-link v-bind:to="`pokemon/${pokemon.id}`">
         <img v-bind:src="pokemon.image" v-bind:alt="pokemon.name" />
       </router-link>
@@ -37,7 +39,6 @@ export default {
         this.pokemons = response.data;
       });
     },
-    isGalarian: function () {},
   },
 };
 </script>
