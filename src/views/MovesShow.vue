@@ -11,7 +11,7 @@
         {{ move.hm_tm }}
       </p>
       <p>
-        <b>Category:</b>
+        <b><strong>Category:</strong></b>
         {{ move.category }}
       </p>
     </div>
