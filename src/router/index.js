@@ -6,6 +6,10 @@ import PokemonShow from "../views/PokemonShow.vue";
 import MovesIndex from "../views/MovesIndex.vue";
 Vue.use(VueRouter);
 import MovesShow from "../views/MovesShow.vue";
+import Signup from "../views/Signup.vue";
+import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
+import UsersShow from "../views/UsersShow.vue";
 
 const routes = [
   {
@@ -36,6 +40,26 @@ const routes = [
     path: "/moves/:id",
     name: "MovesShow",
     component: MovesShow,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: Signup,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/logout",
+    name: "logout",
+    component: Logout,
+  },
+  {
+    path: "/user/:id",
+    name: "user show",
+    component: UsersShow,
   },
 ];
 

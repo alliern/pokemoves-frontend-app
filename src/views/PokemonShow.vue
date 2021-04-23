@@ -17,16 +17,16 @@
       </p>
     </div>
     <div class="moveset">
-    <h1>Moves</h1>
-    <li v-for="poke_move in showMoves" v-bind:key="poke_move.id">
-      <strong>Name: </strong>{{ poke_move.move_name }},
-      <strong>Learned by HM or TM: </strong>
-      {{ poke_move.hm_tm }},
-      <strong>Learned by leveling up: </strong>
-      {{ poke_move.leveling }}
+      <h1>Moves</h1>
+      <li v-for="poke_move in showMoves" v-bind:key="poke_move.id">
+        <strong>Name:</strong>
+        {{ poke_move.move_name }},
+        <strong>Learned by HM or TM:</strong>
+        {{ poke_move.hm_tm }},
+        <strong>Learned by leveling up:</strong>
+        {{ poke_move.leveling }}
 
-      
-      <!-- <p>
+        <!-- <p>
         <strong>Name:</strong>
         {{ pokemon.poke_moves[1]["move_name"] }}
       </p>
@@ -39,7 +39,7 @@
         <strong>Leveling up:</strong>
         {{ pokemon.poke_moves[1]["leveling"] }}
       </p> -->
-    </li>
+      </li>
     </div>
   </div>
 </template>
@@ -59,7 +59,6 @@ export default {
   },
   created: function () {
     this.showPokemon();
-    this.showMoves();
   },
   methods: {
     showPokemon: function () {

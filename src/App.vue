@@ -6,6 +6,19 @@
       <router-link to="/pokemon">All Pokemon</router-link>
       |
       <router-link to="/moves">All Moves</router-link>
+      <span v-if="isLoggedIn()">
+        |
+        <router-link to="/logout">Log Out</router-link>
+
+        |
+        <router-link to="/users/:id">User Profile</router-link>
+      </span>
+      <span v-else>
+        |
+        <router-link to="/signup">Create Account</router-link>
+        |
+        <router-link to="/login">Log In</router-link>
+      </span>
     </div>
     <router-view />
   </div>
@@ -30,6 +43,15 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #dad735;
 }
 </style>
+<script>
+export default {
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
+    },
+  },
+};
+</script>
