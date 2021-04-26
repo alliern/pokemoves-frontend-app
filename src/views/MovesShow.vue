@@ -15,7 +15,12 @@
         {{ move.category }}
       </p>
     </div>
-    <button type="button" class="btn btn-outline-primary"></button>
+    <div class="pokemon-moves">
+      <h2>Pokemon who can learn this move:</h2>
+      <li v-for="pokemon in showPokemon" v-bind:key="pokemon.id">
+        <router-link v-bind:to="`../pokemon/${pokemon.id}`">{{ pokemon.name }}</router-link>
+      </li>
+    </div>
   </div>
 </template>
 
@@ -26,6 +31,11 @@ export default {
     return {
       move: {},
     };
+  },
+  computed: {
+    showPokemon: function () {
+      return this.move.pokemon;
+    },
   },
   created: function () {
     this.showmove();

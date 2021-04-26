@@ -11,6 +11,7 @@ import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import UsersShow from "../views/UsersShow.vue";
 import Profile from "../views/Profile.vue";
+import UserEdit from "../views/UserEdit.vue";
 
 const routes = [
   {
@@ -66,6 +67,11 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: Profile,
+  },
+  {
+    path: "/users/:id/edit",
+    name: "user edit",
+    component: UserEdit,
   },
 ];
 
