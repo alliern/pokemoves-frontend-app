@@ -11,7 +11,7 @@
         <router-link to="/logout">Log Out</router-link>
 
         |
-        <router-link to="/users/:id">User Profile</router-link>
+        <router-link to="/profile">User Profile</router-link>
       </span>
       <span v-else>
         |

@@ -10,6 +10,7 @@ import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import UsersShow from "../views/UsersShow.vue";
+import Profile from "../views/Profile.vue";
 
 const routes = [
   {
@@ -57,9 +58,14 @@ const routes = [
     component: Logout,
   },
   {
-    path: "/user/:id",
+    path: "/users/:id",
     name: "user show",
     component: UsersShow,
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: Profile,
   },
 ];
 
