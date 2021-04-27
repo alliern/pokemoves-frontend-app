@@ -1,19 +1,19 @@
 <template>
   <div class="home">
     <p v-if="isLoggedIn()">Hello, {{ user }}</p>
-    <h1>Welcome to PokéMoves!</h1>
-    <img src="https://cdn3.whatculture.com/images/2019/04/412ce4a582a0e809-1200x675.jpg" />
+    <img src="https://fontmeme.com/permalink/210427/48c8c743154f925a08c2bdbf9561d7aa.png" />
   </div>
 </template>
 
 <style>
-body {
-  background-color: aqua;
+img {
+  width: 700px;
+  height: 180px;
 }
-#img {
-  width: 2000px;
-  height: 1075px;
-}
+/* body {
+  background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
+  background-size: 1400px;
+} */
 </style>
 
 <script>
