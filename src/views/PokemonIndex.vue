@@ -1,44 +1,30 @@
 <template>
   <div class="pokemon-index">
-    <section class="page-section bg-light" id="portfolio">
-      <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1>
-      <!-- <div v-for="pokemon in pokemons" v-bind:key="pokemon.id"> -->
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
-          <div class="col-lg-4 col-sm-5 mb-4">
-            <div class="portfolio-item">
-              <router-link class="portfolio-link" data-toggle="modal" v-bind:to="`pokemon/${pokemon.id}`">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"></div>
-                </div>
-                <!-- <router-link v-bind:to="`pokemon/${pokemon.id}`"> -->
-                <img class="img-fluid" v-bind:src="pokemon.image" v-bind:alt="pokemon.name" />
-                <!-- </router-link> -->
-              </router-link>
-              <div class="portfolio-caption">
-                <h2 class="portfolio-caption-heading" style="font-family: PKMN RBYGSC" v-if="pokemon.region == 'Galar'">
-                  {{ pokemon.name }} ({{ pokemon.region }}ian)
-                </h2>
-                <h2
-                  class="portfolio-caption-heading"
-                  style="font-family: PKMN RBYGSC"
-                  v-else-if="pokemon.region == 'Alola'"
-                >
-                  {{ pokemon.name }} ({{ pokemon.region }}n)
-                </h2>
-                <h2 class="portfolio-caption-heading" style="font-family: PKMN RBYGSC" v-else>{{ pokemon.name }}</h2>
-              </div>
-            </div>
+    <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1>
+    <br />
+    <div class="row row-cols-1 row-cols-sm-3 g-4">
+      <div class="col" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
+        <div class="card h-100">
+          <router-link v-bind:to="`pokemon/${pokemon.id}`">
+            <img class="img-fluid" v-bind:src="pokemon.image" v-bind:alt="pokemon.name" />
+          </router-link>
+          <div class="card-body">
+            <p class="card-text" style="font-family: PKMN RBYGSC" v-if="pokemon.region == 'Galar'">
+              {{ pokemon.name }} ({{ pokemon.region }}ian)
+            </p>
+            <p class="card-text" style="font-family: PKMN RBYGSC" v-else-if="pokemon.region == 'Alola'">
+              {{ pokemon.name }} ({{ pokemon.region }}n)
+            </p>
+            <p class="card-text" style="font-family: PKMN RBYGSC" v-else>{{ pokemon.name }}</p>
           </div>
         </div>
       </div>
-      <!-- </div> -->
-    </section>
+    </div>
   </div>
 </template>
 
 <style>
-.page-section {
+.pokemon-index {
   background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
   background-size: cover;
   background-position: center center;
@@ -46,6 +32,21 @@
 }
 .pokemon-index {
   font-family: "PKMN RBYGSC";
+  margin-top: 30px;
+}
+.card {
+  opacity: 0.8;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+.row {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.col {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>
 

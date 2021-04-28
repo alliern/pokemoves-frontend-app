@@ -1,6 +1,6 @@
 <template>
   <div class="move-show">
-    <div class="card" style="center">
+    <div class="show-card" style="center">
       <div class="card-body">
         <h1 class="card-title" style="font-family: PKMN RBYGSC">{{ move.name }}</h1>
       </div>

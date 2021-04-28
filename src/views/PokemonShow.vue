@@ -1,6 +1,6 @@
 <template>
   <div class="pokemon-show">
-    <div class="card" style="center">
+    <div class="show-card" style="center">
       <div class="card-body">
         <img class="pokemon-image" v-bind:src="pokemon.image" v-bind:alt="pokemon.title" />
         <h3 class="card-title" style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h3>
@@ -44,7 +44,7 @@
   background-attachment: fixed;
   background-position: center center;
 }
-.card {
+.show-card {
   opacity: 0.8;
   margin-left: 150px;
   margin-right: 150px;
