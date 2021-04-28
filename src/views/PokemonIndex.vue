@@ -41,6 +41,7 @@
 .page-section {
   background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
 }
 .pokemon-index {

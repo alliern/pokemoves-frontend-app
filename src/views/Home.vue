@@ -16,9 +16,12 @@ img {
   width: 700px;
   height: 180px;
 }
-/* body {
+/* .home {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
-  background-size: 1400px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no repeat;
 } */
 </style>
 
