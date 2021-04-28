@@ -1,7 +1,13 @@
 <template>
   <div class="home">
-    <p v-if="isLoggedIn()">Hello, {{ user }}</p>
-    <img src="https://fontmeme.com/permalink/210427/48c8c743154f925a08c2bdbf9561d7aa.png" />
+    <p v-if="isLoggedIn()">Hello, {{ user.username }}</p>
+    <!-- <img src="https://fontmeme.com/permalink/210427/48c8c743154f925a08c2bdbf9561d7aa.png" /> -->
+    <img src="https://fontmeme.com/permalink/210428/e8c7e5b709234d03a7d492f36cd6e5fd.png" />
+    <!-- <img
+      src="https://fontmeme.com/permalink/210428/82572bb9cefff71242142fa2b1dbf9d8.png"
+      alt="pokmon-font"
+      border="0"
+    /> -->
   </div>
 </template>
 
@@ -21,7 +27,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      user: this.user.username,
+      user: [],
     };
   },
   created: function () {
@@ -32,7 +38,7 @@ export default {
       return localStorage.getItem("jwt");
     },
     showUser: function () {
-      axios.get("/api/users/profile").then((response) => {
+      axios.get("/api/profile").then((response) => {
         console.log(response.data);
         this.user = response.data;
       });

@@ -1,48 +1,61 @@
 <template>
   <div class="pokemon-show">
-    <div class="container">
-      <img v-bind:src="pokemon.image" v-bind:alt="pokemon.title" />
-      <h1>{{ pokemon.name }}</h1>
-      <p>
-        <strong>Region:</strong>
-        {{ pokemon.region }}
-      </p>
-      <p>
-        <strong>Type 1:</strong>
-        {{ pokemon.type_1 }}
-      </p>
-      <p>
-        <strong>Type 2:</strong>
-        {{ pokemon.type_2 }}
-      </p>
-    </div>
-    <div class="moveset">
-      <h1>Moves</h1>
-      <li v-for="poke_move in showMoves" v-bind:key="poke_move.id">
-        <strong>Name:</strong>
-        {{ poke_move.move_name }},
-        <strong>Learned by HM or TM:</strong>
-        {{ poke_move.hm_tm }},
-        <strong>Learned by leveling up:</strong>
-        {{ poke_move.leveling }}
-
-        <!-- <p>
-        <strong>Name:</strong>
-        {{ pokemon.poke_moves[1]["move_name"] }}
-      </p>
-      <strong>Learned by:</strong>
-      <p>
-        <strong>HM or TM:</strong>
-        {{ pokemon.poke_moves[1]["hm_tm"] }}
-      </p>
-      <p>
-        <strong>Leveling up:</strong>
-        {{ pokemon.poke_moves[1]["leveling"] }}
-      </p> -->
-      </li>
+    <div class="card" style="center">
+      <div class="card-body">
+        <img class="pokemon-image" v-bind:src="pokemon.image" v-bind:alt="pokemon.title" />
+        <h3 class="card-title">{{ pokemon.name }}</h3>
+      </div>
+      <div class="card-body">
+        <li class="list-group-item">
+          <p>
+            <strong>Region:</strong>
+            {{ pokemon.region }}
+          </p>
+          <p>
+            <strong>Type 1:</strong>
+            {{ pokemon.type_1 }}
+          </p>
+          <p>
+            <strong>Type 2:</strong>
+            {{ pokemon.type_2 }}
+          </p>
+        </li>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" style="strong">MOVES</li>
+        <li class="list-group-item" v-for="poke_move in showMoves" v-bind:key="poke_move.id">
+          {{ poke_move.move_name }}
+          <br />
+          <strong>learned by:</strong>
+          <br />
+          HM / TM? {{ poke_move.hm_tm }}
+          <br />
+          <strong>Leveling up?</strong>
+          {{ poke_move.leveling }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
+<style>
+.pokemon-show {
+  background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+  background-size: 1000px;
+}
+.card {
+  opacity: 0.7;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pokemon-image {
+  /* border-radius: 8px; */
+  width: 280px;
+  height: 195px;
+}
+</style>
 
 <script>
 import axios from "axios";

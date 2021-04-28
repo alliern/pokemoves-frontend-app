@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark static-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
         <button
@@ -52,10 +52,12 @@
 
 <style>
 #app {
-  margin-top: 100px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* margin-top: 100px; */
+  /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  font-family: "PKMN RBYGSC";
+  font-size: 20px;
   text-align: center;
   color: #2c3e50;
   /* margin-left: 25px;
@@ -64,6 +66,10 @@
 body {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
   background-size: 1400px;
+}
+@font-face {
+  font-family: "PKMN RBYGSC";
+  src: local("PKMN RBYGSC"), url("./fonts/PKMN RBYGSC.ttf") format("truetype");
 }
 </style>
 <script>
