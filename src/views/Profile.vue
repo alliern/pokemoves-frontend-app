@@ -2,11 +2,11 @@
   <div class="profile">
     <!-- <section class="party-icons" id="team"> -->
     <div class="container">
-      <button type="button" class="btn btn-outline-primary">
-        <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link>
-      </button>
       <div class="text-center">
-        <h1 class="section-heading text-uppercase">{{ user.username }}'s Party</h1>
+        <h1 style="font-family: PKMN RBYGSC" class="section-heading">{{ user.username }}'s Party</h1>
+        <button type="button" class="btn btn-outline-primary">
+          <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link>
+        </button>
       </div>
       <div class="row">
         <div class="col-lg-4">
@@ -18,7 +18,7 @@
               onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
             />
-            <h4>{{ user.pokemon_1 }}</h4>
+            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_1 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
@@ -30,7 +30,7 @@
               onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
             />
-            <h4>{{ user.pokemon_2 }}</h4>
+            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_2 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
@@ -42,7 +42,7 @@
               onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
             />
-            <h4>{{ user.pokemon_3 }}</h4>
+            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_3 }}</h4>
           </div>
         </div>
 
@@ -55,7 +55,7 @@
               onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
             />
-            <h4>{{ user.pokemon_4 }}</h4>
+            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_4 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
@@ -67,7 +67,7 @@
               onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
             />
-            <h4>{{ user.pokemon_5 }}</h4>
+            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_5 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
@@ -79,7 +79,7 @@
               onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
             />
-            <h4>{{ user.pokemon_6 }}</h4>
+            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_6 }}</h4>
           </div>
         </div>
       </div>
@@ -91,7 +91,8 @@
 <style>
 .profile {
   background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
-  background-size: 1000px;
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>
 

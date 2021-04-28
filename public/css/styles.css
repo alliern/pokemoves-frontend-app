@@ -4138,7 +4138,7 @@ input[type="button"].btn-block {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
+  padding-left: 1;
   margin-bottom: 0;
   list-style: none;
 }
@@ -4397,7 +4397,7 @@ input[type="button"].btn-block {
     padding-left: 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 750px) {
   .navbar-expand-lg {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -4533,7 +4533,7 @@ input[type="button"].btn-block {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-toggler-icon {
@@ -10416,7 +10416,7 @@ img::-moz-selection {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: #21252927;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10480,10 +10480,10 @@ img::-moz-selection {
     height: 1.5rem;
   }
   #mainNav .navbar-nav .nav-item {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
   #mainNav .navbar-nav .nav-item:last-child {
-    margin-right: 0;
+    margin-right: 2;
   }
 }
 header.masthead {

@@ -3,7 +3,7 @@
     <div class="card" style="center">
       <div class="card-body">
         <img class="pokemon-image" v-bind:src="pokemon.image" v-bind:alt="pokemon.title" />
-        <h3 class="card-title">{{ pokemon.name }}</h3>
+        <h3 class="card-title" style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h3>
       </div>
       <div class="card-body">
         <li class="list-group-item">
@@ -28,8 +28,8 @@
           <br />
           <strong>learned by:</strong>
           <br />
-          HM / TM? {{ poke_move.hm_tm }}
-          <br />
+          HM / TM? {{ poke_move.hm_tm }};
+
           <strong>Leveling up?</strong>
           {{ poke_move.leveling }}
         </li>
@@ -40,14 +40,15 @@
 <style>
 .pokemon-show {
   background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
-  background-size: 1000px;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .card {
-  opacity: 0.7;
+  opacity: 0.8;
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .pokemon-image {
