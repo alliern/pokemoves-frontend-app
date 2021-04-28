@@ -1,6 +1,13 @@
 <template>
   <div class="pokemon-index">
-    <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1>
+    <img
+      class="index-img"
+      src="https://fontmeme.com/permalink/210428/7712f3b0adbd2fb9ae4a08ad78a1961a.png"
+      alt="pokemon-font"
+      border="0"
+    />
+    <h1></h1>
+    <!-- <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1> -->
     <br />
     <div class="row row-cols-1 row-cols-sm-3 g-4">
       <div class="col" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
@@ -47,6 +54,10 @@
 .col {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.index-img {
+  height: 150px;
+  width: 450px;
 }
 </style>
 
