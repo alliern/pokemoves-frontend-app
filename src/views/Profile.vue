@@ -7,17 +7,20 @@
         <button type="button" class="btn btn-outline-primary">
           <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link>
         </button>
+        <h1></h1>
       </div>
       <div class="row">
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <img
+                class="mx-auto rounded-circle"
+                src="user.pokemon_1"
+                alt=""
+                onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
+              />
+            </a>
             <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_1 }}</h4>
           </div>
         </div>
@@ -84,7 +87,6 @@
         </div>
       </div>
     </div>
-    <!-- </section> -->
   </div>
 </template>
 

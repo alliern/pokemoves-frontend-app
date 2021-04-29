@@ -21,19 +21,26 @@
           </p>
         </li>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item" style="strong">MOVES</li>
+    </div>
+    <div class="show-card">
+      <div class="card-body">
+        <h1 class="card-title" style="font-family: PKMN RBYGSC">Moves</h1>
+      </div>
+      <div class="card-body">
+        <!-- <ul class="list-group list-group-flush"> -->
         <li class="list-group-item" v-for="poke_move in showMoves" v-bind:key="poke_move.id">
           {{ poke_move.move_name }}
+          <h3></h3>
           <br />
-          <strong>learned by:</strong>
+          <strong>Learned By:</strong>
           <br />
           HM / TM? {{ poke_move.hm_tm }};
 
           <strong>Leveling up?</strong>
           {{ poke_move.leveling }}
         </li>
-      </ul>
+        <!-- </ul> -->
+      </div>
     </div>
   </div>
 </template>

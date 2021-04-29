@@ -1,21 +1,22 @@
 <template>
   <div class="home">
-    <h1></h1>
+    <p v-if="isLoggedIn()">Hello, {{ user.username }}</p>
     <!-- <img src="https://fontmeme.com/permalink/210427/48c8c743154f925a08c2bdbf9561d7aa.png" /> -->
-    <img src="https://fontmeme.com/permalink/210428/e8c7e5b709234d03a7d492f36cd6e5fd.png" />
+    <img class="home-img" src="https://fontmeme.com/permalink/210428/e8c7e5b709234d03a7d492f36cd6e5fd.png" />
     <!-- <img
       src="https://fontmeme.com/permalink/210428/82572bb9cefff71242142fa2b1dbf9d8.png"
       alt="pokmon-font"
       border="0"
     /> -->
-    <p v-if="isLoggedIn()">Hello, {{ user.username }}</p>
   </div>
 </template>
 
 <style>
-img {
-  width: 690px;
-  height: 190px;
+.home-img {
+  width: 695px;
+  height: 195px;
+  margin-top: 40px;
+  margin-bottom: 250px;
 }
 /* .home {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");

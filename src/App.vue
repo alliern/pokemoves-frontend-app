@@ -61,10 +61,10 @@
           <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
           <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
         </div> -->
-        <div class="col-lg-4 text-lg-right">
+        <!-- <div>
           <a class="mr-3" href="#!">Privacy Policy</a>
           <a href="#!">Terms of Use</a>
-        </div>
+        </div> -->
       </div>
     </footer>
   </div>
@@ -88,6 +88,9 @@ body {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
   background-size: 1400px;
   background-attachment: fixed;
+}
+footer {
+  background-color: rgba(100, 206, 255, 0);
 }
 @font-face {
   font-family: "PKMN RBYGSC";

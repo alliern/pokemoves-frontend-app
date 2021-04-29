@@ -1,5 +1,5 @@
 <template>
-  <div class="signup">
+  <div class="edit">
     <form v-on:submit.prevent="userEdit(user)">
       <h1>Updating Profile</h1>
       <ul>

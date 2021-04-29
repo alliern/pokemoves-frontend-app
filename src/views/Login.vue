@@ -1,7 +1,12 @@
 <template>
   <div class="login">
     <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
+      <img
+        class="log-img"
+        src="https://fontmeme.com/permalink/210429/d1a8b0b90c63e4a417b20ef4ec234b54.png"
+        alt="pokemon-font"
+        border="0"
+      />
       <ul>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
           {{ error }}
@@ -19,6 +24,17 @@
     </form>
   </div>
 </template>
+
+<style>
+.log-img {
+  height: 120px;
+  width: 410px;
+}
+.form-group {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+</style>
 
 <script>
 import axios from "axios";
