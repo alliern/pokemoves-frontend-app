@@ -6,6 +6,14 @@
       alt="pokemon-font"
       border="0"
     />
+    <div class="input-group">
+      <div class="form-outline">
+        <input type="search" id="form1" class="form-control" placeholder="Search.." />
+      </div>
+      <button type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
     <h1></h1>
     <!-- <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1> -->
     <br />
@@ -58,6 +66,7 @@
 .index-img {
   height: 150px;
   width: 450px;
+  margin-bottom: 20px;
 }
 </style>
 

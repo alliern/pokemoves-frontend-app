@@ -4,12 +4,12 @@
     <div class="container">
       <div class="text-center">
         <h1 style="font-family: PKMN RBYGSC" class="section-heading">{{ user.username }}'s Party</h1>
-        <!-- <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1"> -->
-        <button type="button" class="btn btn-outline-primary">
-          <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link>
-          <!-- Edit Profile -->
-        </button>
-        <!-- </a> -->
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+          <button type="button" class="btn btn-outline-primary">
+            <!-- <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link> -->
+            Edit Profile
+          </button>
+        </a>
         <h1></h1>
       </div>
       <div class="row">
@@ -164,10 +164,10 @@
                     </form>
                   </div>
 
-                  <!-- <button class="btn btn-warning" data-dismiss="modal" type="button">
+                  <button class="btn btn-warning" data-dismiss="modal" type="button">
                     <i class="fas fa-times mr-1"></i>
                     Close
-                  </button> -->
+                  </button>
                 </div>
               </div>
             </div>
@@ -206,24 +206,24 @@ export default {
         this.user = response.data;
       });
     },
-    // userUpdate: function (user) {
-    //   var params = {
-    //     username: user.username,
-    //     email: user.email,
-    //     password: user.password,
-    //     passwordConfirmation: user.password_confirmation,
-    //     pokemon_1: user.pokemon_1,
-    //     pokemon_2: user.pokemon_2,
-    //     pokemon_3: user.pokemon_3,
-    //     pokemon_4: user.pokemon_4,
-    //     pokemon_5: user.pokemon_5,
-    //     pokemon_6: user.pokemon_6,
-    //   };
-    //   axios.patch("/api/users/" + this.user.id, params).then(() => {
-    //     console.log("Updating");
-    //     this.$router.push("/../profile");
-    //   });
-    // },
+    userUpdate: function (user) {
+      var params = {
+        username: user.username,
+        email: user.email,
+        password: user.password,
+        passwordConfirmation: user.password_confirmation,
+        pokemon_1: user.pokemon_1,
+        pokemon_2: user.pokemon_2,
+        pokemon_3: user.pokemon_3,
+        pokemon_4: user.pokemon_4,
+        pokemon_5: user.pokemon_5,
+        pokemon_6: user.pokemon_6,
+      };
+      axios.patch("/api/users/" + this.user.id, params).then(() => {
+        console.log("Updating");
+        // this.$router.push("/../profile");
+      });
+    },
   },
 };
 </script>
