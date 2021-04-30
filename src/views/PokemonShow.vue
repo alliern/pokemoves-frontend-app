@@ -89,11 +89,6 @@ export default {
         this.pokemon = response.data;
       });
     },
-    // moves: function () {
-    //   var i = 0;
-    //   while (i < this.pokemon.poke_moves.length) {
-
-    //   }
   },
 };
 </script>

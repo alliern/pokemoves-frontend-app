@@ -15,76 +15,102 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <router-link v-bind:to="'pokemon/3'">
+              <img
+                class="mx-auto rounded-circle"
+                src="user.pokemon_1"
+                alt=""
+                onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
+              />
+            </router-link>
 
             <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_1 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <router-link v-bind:to="'pokemon/1'">
+              <img
+                class="mx-auto rounded-circle"
+                src="user.pokemon_1"
+                alt=""
+                onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
+              />
+            </router-link>
             <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_2 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <router-link v-bind:to="'pokemon/4'">
+              <img
+                class="mx-auto rounded-circle"
+                src="user.pokemon_1"
+                alt=""
+                onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
+              />
+            </router-link>
             <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_3 }}</h4>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <router-link v-bind:to="'pokemon/2'">
+              <img
+                class="mx-auto rounded-circle"
+                src="user.pokemon_1"
+                alt=""
+                onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
+              />
+            </router-link>
             <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_4 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              v-bind:src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <router-link v-bind:to="'pokemon/5'">
+              <img
+                class="mx-auto rounded-circle"
+                v-bind:src="user.pokemon_1"
+                alt=""
+                onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
+              />
+            </router-link>
             <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_5 }}</h4>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <img
-              class="mx-auto rounded-circle"
-              src="user.pokemon_1"
-              alt=""
-              onerror="this.src
+            <template v-if="user.pokemon_6 === ''">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="user.pokemon_1"
+                  alt=""
+                  onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-            />
-            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_6 }}</h4>
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="'/pokemon'">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="user.pokemon_1"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
+              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_6 }}</h4>
+            </template>
           </div>
         </div>
       </div>
@@ -198,6 +224,7 @@ export default {
   },
   created: function () {
     this.showUser();
+    this.profilePokemon();
   },
   methods: {
     showUser: function () {
@@ -222,6 +249,13 @@ export default {
       axios.patch("/api/users/" + this.user.id, params).then(() => {
         console.log("Updating");
         // this.$router.push("/../profile");
+      });
+    },
+
+    profilePokemon: function () {
+      axios.get("/api/pokemon/").then((response) => {
+        console.log(response.data);
+        this.pokemon = response.data;
       });
     },
   },
