@@ -62,7 +62,7 @@
             <router-link v-bind:to="'pokemon/2'">
               <img
                 class="mx-auto rounded-circle"
-                src="user.pokemon_1"
+                src=""
                 alt=""
                 onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
@@ -76,7 +76,7 @@
             <router-link v-bind:to="'pokemon/5'">
               <img
                 class="mx-auto rounded-circle"
-                v-bind:src="user.pokemon_1"
+                v-bind:src="'https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
                 alt=""
                 onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
@@ -87,11 +87,11 @@
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <template v-if="user.pokemon_6 === ''">
+            <template v-if="user.pokemon_6 == null">
               <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                 <img
                   class="mx-auto rounded-circle"
-                  src="user.pokemon_1"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
                   alt=""
                   onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"

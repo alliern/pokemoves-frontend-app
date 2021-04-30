@@ -6,14 +6,51 @@
       alt="pokemon-font"
       border="0"
     />
-    <div class="input-group">
+    <div class="dropdown show">
+      <a
+        class="btn btn-secondary dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Region
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Kanto</a>
+        <a class="dropdown-item" href="/region">Galar</a>
+        <a class="dropdown-item" href="#">Alola</a>
+      </div>
+      <a
+        class="btn btn-secondary dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Type
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Kanto</a>
+        <a class="dropdown-item" href="/region">Galar</a>
+        <a class="dropdown-item" href="#">Alola</a>
+      </div>
+    </div>
+
+    <!-- <div class="input-group">
       <div class="form-outline">
         <input type="search" id="form1" class="form-control" placeholder="Search.." />
       </div>
       <button type="button" class="btn btn-primary">
         <i class="fas fa-search"></i>
       </button>
-    </div>
+    </div> -->
     <h1></h1>
     <!-- <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1> -->
     <br />

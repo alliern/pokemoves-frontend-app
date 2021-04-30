@@ -3,7 +3,7 @@
     <div class="show-card" style="center">
       <div class="card-body">
         <img class="pokemon-image" v-bind:src="pokemon.image" v-bind:alt="pokemon.title" />
-        <h3 class="card-title" style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h3>
+        <h1 class="card-title" style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h1>
       </div>
       <div class="card-body">
         <li class="list-group-item">
@@ -29,7 +29,7 @@
       <div class="card-body">
         <!-- <ul class="list-group list-group-flush"> -->
         <li class="list-group-item" v-for="poke_move in showMoves" v-bind:key="poke_move.id">
-          {{ poke_move.move_name }}
+          <router-link v-bind:to="`../moves/${poke_move.move_id}`">{{ poke_move.move_name }}</router-link>
           <h3></h3>
           <br />
           <strong>Learned By:</strong>
