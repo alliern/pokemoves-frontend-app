@@ -12,6 +12,7 @@ import Logout from "../views/Logout.vue";
 import UsersShow from "../views/UsersShow.vue";
 import Profile from "../views/Profile.vue";
 import UserEdit from "../views/UserEdit.vue";
+import UserIndex from "../views/UserIndex.vue";
 
 const routes = [
   {
@@ -57,6 +58,11 @@ const routes = [
     path: "/logout",
     name: "logout",
     component: Logout,
+  },
+  {
+    path: "/users",
+    name: "user index",
+    component: UserIndex,
   },
   {
     path: "/users/:id",

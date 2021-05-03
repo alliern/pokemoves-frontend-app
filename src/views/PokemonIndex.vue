@@ -97,13 +97,13 @@ export default {
     },
   },
   computed: {
-    filterRegion: function () {
-      if (this.filterInput) {
-        return this.pokemons.filter((instance) => instance.name == this.filterInput);
-      } else {
-        return this.pokemons;
-      }
-    },
+    // filterRegion: function () {
+    //   if (this.filterInput) {
+    //     return this.pokemons.filter((instance) => instance.name == this.filterInput);
+    //   } else {
+    //     return this.pokemons;
+    //   }
+    // },
   },
 };
 </script>

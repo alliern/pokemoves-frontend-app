@@ -1,7 +1,8 @@
 <template>
-  <div class="moves-index">
-    <br />
+  <div class="users-index">
+    <!-- <br /> -->
     <img
+      style="margin-top: 20px"
       class="index-img"
       src="https://fontmeme.com/permalink/210429/f93e07aaf4a8a5a82e9dccae99a84f58.png"
       alt="pokemon-font"
@@ -9,13 +10,13 @@
     />
 
     <h1></h1>
-    <input type="search" style="center; font-size: 20px;" placeholder="Search name, type..." v-model="filterInput" />
+    <input type="search" style="center; font-size: 20px;" placeholder="Search users..." v-model="filterInput" />
 
     <div class="show-card" style="center">
-      <!-- <div class="card-body" v-for="move in moves" v-bind:key="move.id"> -->
-      <div class="card-body" v-for="move in filterBy(moves, filterInput)" v-bind:key="move.id">
-        <router-link v-bind:to="`moves/${move.id}`">
-          <h2 style="font-family: PKMN RBYGSC">{{ move.name }}</h2>
+      <!-- <div class="card-body" v-for="move in users" v-bind:key="move.id"> -->
+      <div class="card-body" v-for="user in filterBy(users, filterInput)" v-bind:key="user.id">
+        <router-link v-bind:to="`users/${user.id}`">
+          <h2 style="font-family: PKMN RBYGSC">{{ user.username }}</h2>
         </router-link>
       </div>
     </div>
@@ -23,7 +24,7 @@
 </template>
 
 <style>
-.moves-index {
+.users-index {
   background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
   background-size: cover;
   background-position: center center;
@@ -46,18 +47,18 @@ export default {
   mixins: [Vue2Filters.mixin],
   data: function () {
     return {
-      moves: [],
+      users: [],
       filterInput: "",
     };
   },
   created: function () {
-    this.indexmoves();
+    this.indexUsers();
   },
   methods: {
-    indexmoves: function () {
-      axios.get("/api/moves").then((response) => {
+    indexUsers: function () {
+      axios.get("/api/users").then((response) => {
         console.log(response.data);
-        this.moves = response.data;
+        this.users = response.data;
       });
     },
   },

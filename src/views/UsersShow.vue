@@ -219,6 +219,7 @@ export default {
   data: function () {
     return {
       user: {},
+      errors: [],
     };
   },
   created: function () {

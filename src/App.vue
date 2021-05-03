@@ -33,6 +33,9 @@
             <li class="nav-item" v-if="isLoggedIn()">
               <a style="font-family: PKMN RBYGSC" class="nav-link js-scroll-trigger" href="/profile">User Profile</a>
             </li>
+            <li v-if="isLoggedIn()" class="nav-item">
+              <a style="font-family: PKMN RBYGSC" class="nav-link js-scroll-trigger" href="/users">Browse Users</a>
+            </li>
 
             <li v-if="isLoggedIn()" class="nav-item">
               <a style="font-family: PKMN RBYGSC" class="nav-link js-scroll-trigger" href="/logout">Log Out</a>
@@ -83,7 +86,7 @@ body {
   background-attachment: fixed;
 }
 footer {
-  background-color: rgba(100, 206, 255, 0);
+  background-color: rgb(128, 184, 76);
 }
 @font-face {
   font-family: "PKMN RBYGSC";
