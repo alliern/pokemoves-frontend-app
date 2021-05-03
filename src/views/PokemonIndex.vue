@@ -6,56 +6,22 @@
       alt="pokemon-font"
       border="0"
     />
-    <div class="dropdown show">
-      <a
-        class="btn btn-secondary dropdown-toggle"
-        href="#"
-        role="button"
-        id="dropdownMenuLink"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Region
-      </a>
+    <br />
 
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Kanto</a>
-        <a class="dropdown-item" href="/region">Galar</a>
-        <a class="dropdown-item" href="#">Alola</a>
-      </div>
-      <a
-        class="btn btn-secondary dropdown-toggle"
-        href="#"
-        role="button"
-        id="dropdownMenuLink"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Type
-      </a>
+    <input
+      type="search"
+      style="center; font-size: 20px;"
+      placeholder="Search name, region, type..."
+      v-model="filterInput"
+    />
 
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Kanto</a>
-        <a class="dropdown-item" href="/region">Galar</a>
-        <a class="dropdown-item" href="#">Alola</a>
-      </div>
-    </div>
-
-    <!-- <div class="input-group">
-      <div class="form-outline">
-        <input type="search" id="form1" class="form-control" placeholder="Search.." />
-      </div>
-      <button type="button" class="btn btn-primary">
-        <i class="fas fa-search"></i>
-      </button>
-    </div> -->
     <h1></h1>
     <!-- <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1> -->
     <br />
+
     <div class="row row-cols-1 row-cols-sm-3 g-4">
-      <div class="col" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
+      <div class="col" v-for="pokemon in filterBy(pokemons, filterInput)" v-bind:key="pokemon.id">
+        <!-- <div class="col" v-for="pokemon in pokemons" v-bind:key="pokemon.id"> -->
         <div class="card h-100">
           <router-link v-bind:to="`pokemon/${pokemon.id}`">
             <img class="img-fluid" v-bind:src="pokemon.image" v-bind:alt="pokemon.name" />
@@ -109,10 +75,14 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function () {
     return {
       pokemons: [],
+      pokemon: {},
+      filterInput: "",
     };
   },
   created: function () {
@@ -124,6 +94,15 @@ export default {
         console.log(response.data);
         this.pokemons = response.data;
       });
+    },
+  },
+  computed: {
+    filterRegion: function () {
+      if (this.filterInput) {
+        return this.pokemons.filter((instance) => instance.name == this.filterInput);
+      } else {
+        return this.pokemons;
+      }
     },
   },
 };

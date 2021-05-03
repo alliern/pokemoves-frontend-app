@@ -37,15 +37,8 @@
             <li v-if="isLoggedIn()" class="nav-item">
               <a style="font-family: PKMN RBYGSC" class="nav-link js-scroll-trigger" href="/logout">Log Out</a>
             </li>
-            <li class="nav-item">
-              <a
-                v-if="!isLoggedIn()"
-                style="font-family: PKMN RBYGSC"
-                class="nav-link js-scroll-trigger"
-                href="/signup"
-              >
-                Create Account
-              </a>
+            <li v-if="!isLoggedIn()" class="nav-item">
+              <a style="font-family: PKMN RBYGSC" class="nav-link js-scroll-trigger" href="/signup">Create Account</a>
             </li>
           </ul>
         </div>
