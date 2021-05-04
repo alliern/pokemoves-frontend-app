@@ -76,20 +76,12 @@ export default {
     axios.get("/api/users/" + this.$route.params.id);
   },
   methods: {
-    userEdit: function (user) {
+    userEdit: function (user_pokemon) {
       var params = {
-        username: user.username,
-        email: user.email,
-        password: user.password,
-        passwordConfirmation: user.password_confirmation,
-        pokemon_1: user.pokemon_1,
-        pokemon_2: user.pokemon_2,
-        pokemon_3: user.pokemon_3,
-        pokemon_4: user.pokemon_4,
-        pokemon_5: user.pokemon_5,
-        pokemon_6: user.pokemon_6,
+        pokemon_id: user_pokemon.pokemon_id,
+        pokemon_name: user_pokemon.pokemon_name,
       };
-      axios.patch("/api/users/" + this.user.id, params).then(() => {
+      axios.patch("/api/user_pokemon/" + this.user_pokemon.id, params).then(() => {
         console.log("Updating");
         this.$router.push("/../profile");
       });

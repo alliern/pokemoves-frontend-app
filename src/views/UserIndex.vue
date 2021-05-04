@@ -4,7 +4,7 @@
     <img
       style="margin-top: 20px"
       class="index-img"
-      src="https://fontmeme.com/permalink/210429/f93e07aaf4a8a5a82e9dccae99a84f58.png"
+      src="https://fontmeme.com/permalink/210504/df38d4e2efe8e0678f69651bb2222acd.png"
       alt="pokemon-font"
       border="0"
     />
@@ -33,8 +33,8 @@
 .show-card {
   opacity: 0.8;
   background-color: rgb(253, 255, 255);
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 200px;
+  margin-right: 200px;
   margin-top: 30px;
   /* margin-bottom: 30px; */
 }

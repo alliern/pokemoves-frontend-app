@@ -10,9 +10,40 @@
             Edit Profile
           </button>
         </a>
+        <!-- <a class="portfolio-link" data-toggle="modal" href="../user_pokemon/">
+          <button type="button" class="btn btn-primary">Edit Party</button>
+        </a> -->
         <h1></h1>
       </div>
       <div class="row">
+        <!-- <div class="col-lg-4" v-for="pokemon in showUserP" v-bind:key="pokemon.id">
+          <div class="team-member">
+            <template v-if="user.pokemon_1 == ''">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="`pokemon/${pokemon.id}`">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="user.pokemon_1"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
+
+              <h4 style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h4>
+            </template>
+          </div> -->
         <div class="col-lg-4">
           <div class="team-member">
             <template v-if="user.pokemon_1 == ''">
@@ -28,7 +59,7 @@
               <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
             </template>
             <template v-else>
-              <router-link v-bind:to="'pokemon/3'">
+              <router-link v-bind:to="'pokemon/1'">
                 <img
                   class="mx-auto rounded-circle"
                   src="user.pokemon_1"
@@ -158,7 +189,7 @@
         <div class="col-lg-4">
           <div class="team-member">
             <template v-if="user.pokemon_6 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
                 <img
                   class="mx-auto rounded-circle"
                   src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
@@ -292,9 +323,13 @@ export default {
       errors: [],
     };
   },
+  computed: {
+    showUserP: function () {
+      return this.user.pokemons;
+    },
+  },
   created: function () {
     this.showUser();
-    this.profilePokemon();
   },
   methods: {
     showUser: function () {
@@ -319,13 +354,6 @@ export default {
       axios.patch("/api/users/" + this.user.id, params).then(() => {
         console.log("Updating");
         // this.$router.push("/../profile");
-      });
-    },
-
-    profilePokemon: function () {
-      axios.get("/api/pokemon/").then((response) => {
-        console.log(response.data);
-        this.pokemon = response.data;
       });
     },
   },

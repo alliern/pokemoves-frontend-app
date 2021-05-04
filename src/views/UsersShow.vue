@@ -15,79 +15,149 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="team-member">
-            <router-link v-bind:to="'pokemon/3'">
-              <img
-                class="mx-auto rounded-circle"
-                src="user.pokemon_1"
-                alt=""
-                onerror="this.src
+            <template v-if="user.pokemon_1 == '' || null">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
+                  alt=""
+                  onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-              />
-            </router-link>
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="'../pokemon/3'">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="user.pokemon_1"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
 
-            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_1 }}</h4>
+              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_1 }}</h4>
+            </template>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <router-link v-bind:to="'pokemon/1'">
-              <img
-                class="mx-auto rounded-circle"
-                src="user.pokemon_1"
-                alt=""
-                onerror="this.src
+            <template v-if="user.pokemon_2 == '' || null">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
+                  alt=""
+                  onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-              />
-            </router-link>
-            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_2 }}</h4>
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="'../pokemon/1'">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="user.pokemon_1"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
+              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_2 }}</h4>
+            </template>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <router-link v-bind:to="'pokemon/4'">
-              <img
-                class="mx-auto rounded-circle"
-                src="user.pokemon_1"
-                alt=""
-                onerror="this.src
+            <template v-if="user.pokemon_3 == '' || null">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
+                  alt=""
+                  onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-              />
-            </router-link>
-            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_3 }}</h4>
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="'../pokemon/4'">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="user.pokemon_1"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
+              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_3 }}</h4>
+            </template>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="team-member">
-            <router-link v-bind:to="'pokemon/2'">
-              <img
-                class="mx-auto rounded-circle"
-                src=""
-                alt=""
-                onerror="this.src
+            <template v-if="user.pokemon_4 == '' || null">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
+                  alt=""
+                  onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-              />
-            </router-link>
-            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_4 }}</h4>
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="'../pokemon/2'">
+                <img
+                  class="mx-auto rounded-circle"
+                  src=""
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
+              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_4 }}</h4>
+            </template>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <router-link v-bind:to="'pokemon/5'">
-              <img
-                class="mx-auto rounded-circle"
-                v-bind:src="'https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                alt=""
-                onerror="this.src
+            <template v-if="user.pokemon_5 == '' || null">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <img
+                  class="mx-auto rounded-circle"
+                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
+                  alt=""
+                  onerror="this.src
               ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-              />
-            </router-link>
-            <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_5 }}</h4>
+                />
+              </a>
+              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
+            </template>
+            <template v-else>
+              <router-link v-bind:to="'../pokemon/5'">
+                <img
+                  class="mx-auto rounded-circle"
+                  v-bind:src="'https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                  alt=""
+                  onerror="this.src
+              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
+                />
+              </router-link>
+              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_5 }}</h4>
+            </template>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="team-member">
-            <template v-if="user.pokemon_6 == null">
+            <template v-if="user.pokemon_6 == '' || null">
               <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                 <img
                   class="mx-auto rounded-circle"
@@ -125,7 +195,9 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+          <div class="close-modal" data-dismiss="modal">
+            <img src="assets/img/close-icon.svg" alt="Close modal" />
+          </div>
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-8">
