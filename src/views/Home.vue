@@ -3,7 +3,9 @@
     <p v-if="isLoggedIn()">Hello, {{ user.username }}</p>
     <!-- <img src="https://fontmeme.com/permalink/210427/48c8c743154f925a08c2bdbf9561d7aa.png" /> -->
     <img class="home-img" src="https://fontmeme.com/permalink/210428/e8c7e5b709234d03a7d492f36cd6e5fd.png" />
-    <p style="margin-bottom: 180px">Your database for Pokémon and their moves</p>
+    <br />
+    <p style="font-size: 18px; margin-bottom: 300px">Your database for Pokémon and their battle moves</p>
+
     <!-- <img
       src="https://fontmeme.com/permalink/210428/82572bb9cefff71242142fa2b1dbf9d8.png"
       alt="pokmon-font"
