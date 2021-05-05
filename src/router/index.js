@@ -13,6 +13,7 @@ import UsersShow from "../views/UsersShow.vue";
 import Profile from "../views/Profile.vue";
 import UserEdit from "../views/UserEdit.vue";
 import UserIndex from "../views/UserIndex.vue";
+import UserPokemonIndex from "../views/UserPokemonIndex.vue";
 
 const routes = [
   {
@@ -78,6 +79,11 @@ const routes = [
     path: "/users/:id/edit",
     name: "user edit",
     component: UserEdit,
+  },
+  {
+    path: "/user_pokemon",
+    name: "user pokemon",
+    component: UserPokemonIndex,
   },
 ];
 

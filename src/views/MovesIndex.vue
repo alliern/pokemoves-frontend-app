@@ -9,7 +9,8 @@
     />
 
     <h1></h1>
-    <input type="search" style="center; font-size: 20px;" placeholder="Search name, type..." v-model="filterInput" />
+    <input type="search" style="center; font-size: 20px;" placeholder="search..." v-model="filterInput" />
+    <h6 style="font-family: PKMN RBYGSC">Search by name, type, or category</h6>
 
     <div class="show-card" style="center">
       <!-- <div class="card-body" v-for="move in moves" v-bind:key="move.id"> -->

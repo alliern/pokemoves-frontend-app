@@ -8,12 +8,8 @@
     />
     <br />
 
-    <input
-      type="search"
-      style="center; font-size: 20px;"
-      placeholder="Search name, region, type..."
-      v-model="filterInput"
-    />
+    <input type="search" style="center; font-size: 20px;" placeholder="search..." v-model="filterInput" />
+    <h6 style="font-family: PKMN RBYGSC">Search by name, region, or type</h6>
 
     <h1></h1>
     <!-- <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1> -->

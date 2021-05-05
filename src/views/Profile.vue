@@ -3,12 +3,13 @@
     <!-- <section class="party-icons" id="team"> -->
     <div class="container">
       <div class="text-center">
-        <h1 style="font-family: PKMN RBYGSC" class="section-heading">{{ user.username }}'s Party</h1>
+        <h1 style="font-family: PKMN RBYGSC; margin-top: 20px" class="section-heading">{{ user.username }}'s Party</h1>
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-          <button type="button" class="btn btn-primary">
+          <button type="button" class="btn btn-primary" style="margin-bottom: 30px">
             <!-- <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link> -->
             Edit Profile
           </button>
+          <br />
         </a>
         <!-- <a class="portfolio-link" data-toggle="modal" href="../user_pokemon/">
           <button type="button" class="btn btn-primary">Edit Party</button>
@@ -189,7 +190,7 @@
         <div class="col-lg-4">
           <div class="team-member">
             <template v-if="user.pokemon_6 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                 <img
                   class="mx-auto rounded-circle"
                   src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
@@ -250,14 +251,14 @@
                           <label>Email:</label>
                           <input type="text" class="form-control" v-model="user.email" />
                         </div>
-                        <div class="col">
+                        <!-- <div class="col">
                           <label>Password:</label>
                           <input type="password" class="form-control" v-model="user.password" />
                         </div>
                         <div class="col">
                           <label>Conf. Pswrd:</label>
-                          <input type="password" class="form-control" v-model="user.passwordConfirmation" />
-                        </div>
+                          <input type="password" class="form-control" v-model="user.passwordConfirmation" /> -->
+                        <!-- </div> -->
                         <!-- </div> -->
 
                         <!-- <div class="row row-cols-2"> -->
@@ -311,6 +312,9 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+}
+.portfolioModal1 {
+  background: center;
 }
 </style>
 

@@ -82,11 +82,11 @@
 
 body {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
-  background-size: 1400px;
+  background-size: 1550px;
   background-attachment: fixed;
 }
 footer {
-  background-color: rgb(128, 184, 76);
+  background-color: rgb(129, 172, 119);
 }
 @font-face {
   font-family: "PKMN RBYGSC";
