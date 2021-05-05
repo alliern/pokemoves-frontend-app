@@ -1,8 +1,10 @@
 <template>
   <div class="user-pokemon-index">
     <!-- <br /> -->
-    <form v-on:submit.prevent="userpAdd(user_pokemon)">
-      <h1 style="font-family: PKMN RBYGSC; margin-top: 30px; margin-bottom: 40px; color: gold">Updating Pokémon</h1>
+    <form>
+      <h1 style="font-family: PKMN RBYGSC; margin-top: 30px; margin-bottom: 40px; color: gold">
+        Updating Pokémon Party
+      </h1>
       <ul>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
           {{ error }}
@@ -16,16 +18,19 @@
 
           <p>Pokemon Name: {{ user_pokemon.pokemon_name }}</p>
 
-          <button type="button" class="btn btn-danger" v-on:click="destroy(user_pokemon)">Delete</button>
+          <button type="button" class="btn btn-outline-danger" v-on:click="destroy(user_pokemon)">Delete</button>
           <br />
         </div>
-        <h2>Add Pokemon:</h2>
+        <h2 style="font-family: PKMN RBYGSC; margin-top: 25px; margin-bottom: 20px; color: green">Add Pokemon:</h2>
         <label>Pokemon_id:</label>
         <input type="text" class="form-control" v-model="newpokemon_id" />
         <label>Pokemon Name:</label>
         <input type="text" class="form-control" v-model="newpokemon_name" />
-        <button v-on:click="userpAdd" class="btn btn-primary">Add a Pokemon</button>
-        <router-link v-bind:to="'../profile'"><button class="btn btn-primary">Return to Profile</button></router-link>
+        <button style="margin-top: 15px" v-on:click="userpAdd" class="btn btn-outline-success">Add a Pokemon</button>
+        <br />
+        <router-link v-bind:to="'../profile'">
+          <button style="margin-top: 20px; margin-bottom: 15px" class="btn btn-primary">Return to Profile</button>
+        </router-link>
       </div>
     </form>
   </div>
@@ -58,12 +63,11 @@ export default {
       // user_id: this.user.id,
       newpokemon_id: "",
       newpokemon_name: "",
-      currentPokemon: {},
+      // currentPokemon: {},
     };
   },
   created: function () {
     this.userPokemon();
-    this.userpAdd();
   },
   methods: {
     userPokemon: function () {
@@ -81,8 +85,8 @@ export default {
       axios
         .post("/api/user_pokemon", params)
         .then((response) => {
-          console.log("Updating");
-          this.user_pokemon.push(response.data);
+          console.log(response.data);
+          window.location.reload();
         })
         .catch((error) => console.log(error.response));
     },

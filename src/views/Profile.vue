@@ -5,214 +5,42 @@
       <div class="text-center">
         <h1 style="font-family: PKMN RBYGSC; margin-top: 20px" class="section-heading">{{ user.username }}'s Party</h1>
         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-          <button type="button" class="btn btn-primary" style="margin-bottom: 30px">
-            <!-- <router-link v-bind:to="`users/${user.id}/edit`">Edit Profile</router-link> -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            style="margin-bottom: 30px; margnin-right: 20px; margin-top: 15px"
+          >
             Edit Profile
           </button>
-          <br />
         </a>
-        <!-- <a class="portfolio-link" data-toggle="modal" href="../user_pokemon/">
-          <button type="button" class="btn btn-primary">Edit Party</button>
-        </a> -->
+
+        <router-link v-bind:to="`../user_pokemon`">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            style="margin-bottom: 30px; margin-left: 20px; margin-top: 15px"
+          >
+            Edit Party
+          </button>
+        </router-link>
+
         <h1></h1>
       </div>
       <div class="row">
-        <!-- <div class="col-lg-4" v-for="pokemon in showUserP" v-bind:key="pokemon.id">
+        <div class="col-lg-4" v-for="pokemon in limitBy(showUserP, 6)" v-bind:key="pokemon.id">
           <div class="team-member">
-            <template v-if="user.pokemon_1 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="`pokemon/${pokemon.id}`">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="user.pokemon_1"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-
+            <router-link v-bind:to="`../pokemon/${pokemon.id}`">
+              <img class="mx-auto rounded-circle" src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png" alt="" />
+            </router-link>
+            <div v-if="pokemon.region == 'Galar'">
+              <h4 style="font-family: PKMN RBYGSC">Galarian {{ pokemon.name }}</h4>
+            </div>
+            <div v-else-if="pokemon.region == 'Alola'">
+              <h4 style="font-family: PKMN RBYGSC">Alolan {{ pokemon.name }}</h4>
+            </div>
+            <div v-else>
               <h4 style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h4>
-            </template>
-          </div> -->
-        <div class="col-lg-4">
-          <div class="team-member">
-            <template v-if="user.pokemon_1 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="'pokemon/1'">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="user.pokemon_1"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-
-              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_1 }}</h4>
-            </template>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="team-member">
-            <template v-if="user.pokemon_2 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="'pokemon/1'">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="user.pokemon_1"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_2 }}</h4>
-            </template>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="team-member">
-            <template v-if="user.pokemon_3 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="'pokemon/4'">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="user.pokemon_1"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_3 }}</h4>
-            </template>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="team-member">
-            <template v-if="user.pokemon_4 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="'pokemon/2'">
-                <img
-                  class="mx-auto rounded-circle"
-                  src=""
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_4 }}</h4>
-            </template>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="team-member">
-            <template v-if="user.pokemon_5 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="'pokemon/5'">
-                <img
-                  class="mx-auto rounded-circle"
-                  v-bind:src="'https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_5 }}</h4>
-            </template>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="team-member">
-            <template v-if="user.pokemon_6 == ''">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="http://www.clipartbest.com/cliparts/bcy/77L/bcy77LGRi.gif"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </a>
-              <h4 style="font-family: PKMN RBYGSC">Add Pokemon</h4>
-            </template>
-            <template v-else>
-              <router-link v-bind:to="'/pokemon'">
-                <img
-                  class="mx-auto rounded-circle"
-                  src="user.pokemon_1"
-                  alt=""
-                  onerror="this.src
-              ='https://pngimg.com/uploads/pokeball/pokeball_PNG8.png'"
-                />
-              </router-link>
-              <h4 style="font-family: PKMN RBYGSC">{{ user.pokemon_6 }}</h4>
-            </template>
+            </div>
           </div>
         </div>
       </div>
@@ -251,40 +79,13 @@
                           <label>Email:</label>
                           <input type="text" class="form-control" v-model="user.email" />
                         </div>
-                        <!-- <div class="col">
+                        <div class="col">
                           <label>Password:</label>
                           <input type="password" class="form-control" v-model="user.password" />
                         </div>
                         <div class="col">
                           <label>Conf. Pswrd:</label>
-                          <input type="password" class="form-control" v-model="user.passwordConfirmation" /> -->
-                        <!-- </div> -->
-                        <!-- </div> -->
-
-                        <!-- <div class="row row-cols-2"> -->
-                        <div class="col">
-                          <label>Pokemon 1:</label>
-                          <input type="text" class="form-control" v-model="user.pokemon_1" />
-                        </div>
-                        <div class="col">
-                          <label>Pokemon 2:</label>
-                          <input type="text" class="form-control" v-model="user.pokemon_2" />
-                        </div>
-                        <div class="col">
-                          <label>Pokemon 3:</label>
-                          <input type="text" class="form-control" v-model="user.pokemon_3" />
-                        </div>
-                        <div class="col">
-                          <label>Pokemon 4:</label>
-                          <input type="text" class="form-control" v-model="user.pokemon_4" />
-                        </div>
-                        <div class="col">
-                          <label>Pokemon 5:</label>
-                          <input type="text" class="form-control" v-model="user.pokemon_5" />
-                        </div>
-                        <div class="col">
-                          <label>Pokemon 6:</label>
-                          <input type="text" class="form-control" v-model="user.pokemon_6" />
+                          <input type="password" class="form-control" v-model="user.passwordConfirmation" />
                         </div>
                       </div>
 
@@ -320,7 +121,9 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function () {
     return {
       user: {},
