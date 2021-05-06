@@ -16,6 +16,10 @@
         <div class="form-group">
           <label>Username:</label>
           <input type="text" class="form-control" v-model="username" />
+          <small v-if="username.length < 21 && username.length > 0">
+            {{ 20 - username.length }} Characters remaining
+          </small>
+          <small class="text-danger" v-else-if="username.length > 20">Username is too long!</small>
         </div>
         <div class="form-group">
           <label>Email:</label>
@@ -73,7 +77,11 @@ export default {
           this.$router.push("/login");
         })
         .catch((error) => {
-          this.errors = error.response.data.errors;
+          console.log(error.response);
+          this.errors = ["passwords must match"];
+          this.password = "";
+          this.passwordConfirmation = "";
+          // error.response.data.errors;
         });
     },
   },

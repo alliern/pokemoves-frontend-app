@@ -14,19 +14,19 @@
       <div class="show-card" style="center">
         <!-- <div class="card-body" v-for="move in users" v-bind:key="move.id"> -->
         <div class="card-body" v-for="user_pokemon in user_pokemon" v-bind:key="user_pokemon.id">
-          <p>Pokemon_id: {{ user_pokemon.pokemon_id }}</p>
+          <p>Pokémon id: {{ user_pokemon.pokemon_id }}</p>
 
-          <p>Pokemon Name: {{ user_pokemon.pokemon_name }}</p>
+          <p>Pokémon Name: {{ user_pokemon.pokemon_name }}</p>
 
           <button type="button" class="btn btn-outline-danger" v-on:click="destroy(user_pokemon)">Delete</button>
           <br />
         </div>
-        <h2 style="font-family: PKMN RBYGSC; margin-top: 25px; margin-bottom: 20px; color: green">Add Pokemon:</h2>
-        <label>Pokemon_id:</label>
+        <h2 style="font-family: PKMN RBYGSC; margin-top: 25px; margin-bottom: 20px; color: green">Add a Pokémon:</h2>
+        <label>Pokémon id:</label>
         <input type="text" class="form-control" v-model="newpokemon_id" />
-        <label>Pokemon Name:</label>
+        <label>Pokémon Name:</label>
         <input type="text" class="form-control" v-model="newpokemon_name" />
-        <button style="margin-top: 15px" v-on:click="userpAdd" class="btn btn-outline-success">Add a Pokemon</button>
+        <button style="margin-top: 15px" v-on:click="userpAdd" class="btn btn-outline-success">Add Pokémon</button>
         <br />
         <router-link v-bind:to="'../profile'">
           <button style="margin-top: 20px; margin-bottom: 15px" class="btn btn-primary">Return to Profile</button>
@@ -60,10 +60,8 @@ export default {
     return {
       user_pokemon: [],
       errors: [],
-      // user_id: this.user.id,
       newpokemon_id: "",
       newpokemon_name: "",
-      // currentPokemon: {},
     };
   },
   created: function () {
@@ -78,7 +76,6 @@ export default {
     },
     userpAdd: function () {
       var params = {
-        // user_id: this.user_id,
         pokemon_id: this.newpokemon_id,
         pokemon_name: this.newpokemon_name,
       };
@@ -91,7 +88,6 @@ export default {
         .catch((error) => console.log(error.response));
     },
     destroy: function (user_pokemon) {
-      // this.currentPokemon = user_pokemon;
       axios.delete("/api/user_pokemon/" + user_pokemon.id).then(() => {
         var index = this.user_pokemon.indexOf(user_pokemon);
         this.user_pokemon.splice(index, 1);

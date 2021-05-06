@@ -34,6 +34,9 @@
   margin-left: 200px;
   margin-right: 200px;
 }
+.login {
+  margin-bottom: 160px;
+}
 </style>
 
 <script>

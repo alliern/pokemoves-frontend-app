@@ -5,20 +5,15 @@
     <img class="home-img" src="https://fontmeme.com/permalink/210428/e8c7e5b709234d03a7d492f36cd6e5fd.png" />
     <br />
     <p style="font-size: 18px; margin-bottom: 300px">Your database for Pokémon and their battle moves</p>
-
-    <!-- <img
-      src="https://fontmeme.com/permalink/210428/82572bb9cefff71242142fa2b1dbf9d8.png"
-      alt="pokmon-font"
-      border="0"
-    /> -->
   </div>
 </template>
 
 <style>
 .home-img {
-  width: 695px;
+  width: 700px;
   height: 195px;
   margin-top: 10px;
+  margin-bottom: 5px;
   /* margin-bottom: 250px; */
 }
 /* .home {

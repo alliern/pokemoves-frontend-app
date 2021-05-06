@@ -81,7 +81,7 @@
                         </div>
                         <div class="col">
                           <label>Password:</label>
-                          <input type="password" class="form-control" v-model="user.password" />
+                          <input type="password" class="form-control" v-model="user.password" id="myInput" />
                         </div>
                         <div class="col">
                           <label>Conf. Pswrd:</label>
@@ -89,13 +89,11 @@
                         </div>
                       </div>
 
-                      <input type="submit" class="btn btn-primary" value="Submit" />
+                      <input type="submit" class="btn btn-primary" data-dismiss="modal" value="Submit" />
                     </form>
                   </div>
-
-                  <button class="btn btn-warning" data-dismiss="modal" type="button">
-                    <i class="fas fa-times mr-1"></i>
-                    Close
+                  <button type="button" class="btn btn-danger" data-dismiss="modal" v-on:click="destroy(user)">
+                    Delete Profile
                   </button>
                 </div>
               </div>
@@ -151,16 +149,16 @@ export default {
         email: user.email,
         password: user.password,
         passwordConfirmation: user.password_confirmation,
-        pokemon_1: user.pokemon_1,
-        pokemon_2: user.pokemon_2,
-        pokemon_3: user.pokemon_3,
-        pokemon_4: user.pokemon_4,
-        pokemon_5: user.pokemon_5,
-        pokemon_6: user.pokemon_6,
       };
       axios.patch("/api/users/" + this.user.id, params).then(() => {
         console.log("Updating");
-        // this.$router.push("/../profile");
+      });
+    },
+    destroy: function (user) {
+      axios.delete("/api/users/" + user.id).then(() => {
+        var index = this.user.indexOf(user);
+        this.user.splice(index, 1);
+        this.$router.push("/");
       });
     },
   },
