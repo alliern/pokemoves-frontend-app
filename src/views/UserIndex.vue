@@ -12,7 +12,7 @@
     <h1></h1>
 
     <input type="search" style="center; font-size: 20px;" placeholder="search..." v-model="filterInput" />
-    <h6 style="font-family: PKMN RBYGSC">Search by username or Pokemon</h6>
+    <h6 style="font-family: PKMN RBYGSC">Search by username</h6>
     <div class="show-card" style="center">
       <!-- <div class="card-body" v-for="move in users" v-bind:key="move.id"> -->
       <div class="card-body" v-for="user in filterBy(users, filterInput)" v-bind:key="user.id">
