@@ -4,7 +4,7 @@
     <!-- <img src="https://fontmeme.com/permalink/210427/48c8c743154f925a08c2bdbf9561d7aa.png" /> -->
     <img class="home-img" src="https://fontmeme.com/permalink/210428/e8c7e5b709234d03a7d492f36cd6e5fd.png" />
     <br />
-    <p style="font-size: 18px; margin-bottom: 300px">Your database for Pokémon and their battle moves</p>
+    <p style="font-size: 18px">Your database for Pokémon and their battle moves</p>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-repeat: no repeat;
+  background-repeat: no;
 } */
 </style>
 

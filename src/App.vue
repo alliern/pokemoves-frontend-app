@@ -80,14 +80,21 @@
   margin-right: 25px; */
 }
 
+/* body {
+  background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no repeat;
+} */
 body {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
   background-size: 1550px;
   background-attachment: fixed;
 }
-footer {
+/* footer {
   background-color: rgb(129, 172, 119);
-}
+} */
 @font-face {
   font-family: "PKMN RBYGSC";
   src: local("PKMN RBYGSC"), url("./fonts/PKMN RBYGSC.ttf") format("truetype");

@@ -31,6 +31,7 @@
             </p>
             <p class="card-text" style="font-family: PKMN RBYGSC" v-else>{{ pokemon.name }}</p>
           </div>
+          <!-- <button>Add to Party</button> -->
         </div>
       </div>
     </div>
