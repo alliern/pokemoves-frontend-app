@@ -27,7 +27,6 @@
         <h1 class="card-title" style="font-family: PKMN RBYGSC">Moves</h1>
       </div>
       <div class="card-body">
-        <!-- <ul class="list-group list-group-flush"> -->
         <li class="list-group-item" v-for="poke_move in showMoves" v-bind:key="poke_move.id">
           <router-link v-bind:to="`../moves/${poke_move.move_id}`">{{ poke_move.move_name }}</router-link>
           <h3></h3>
@@ -39,7 +38,6 @@
           <strong>Leveling up?</strong>
           {{ poke_move.leveling }}
         </li>
-        <!-- </ul> -->
       </div>
     </div>
   </div>
@@ -56,11 +54,9 @@
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 30px;
-  /* margin-bottom: 30px; */
 }
 
 .pokemon-image {
-  /* border-radius: 8px; */
   width: 280px;
   height: 195px;
 }

@@ -39,9 +39,6 @@
   </div>
 </template>
 <style>
-/* .log-card {
-  background-color: rgba(91, 204, 238, 0.253);
-} */
 .signup {
   background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
   background-size: cover;
@@ -81,7 +78,6 @@ export default {
           this.errors = ["passwords must match"];
           this.password = "";
           this.passwordConfirmation = "";
-          // error.response.data.errors;
         });
     },
   },

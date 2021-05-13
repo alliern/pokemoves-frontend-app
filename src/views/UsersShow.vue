@@ -1,6 +1,5 @@
 <template>
   <div class="profile">
-    <!-- <section class="party-icons" id="team"> -->
     <div class="container">
       <div class="text-center">
         <h1 style="font-family: PKMN RBYGSC" class="section-heading">{{ user.username }}'s Party</h1>
@@ -28,7 +27,6 @@
             <div v-else>
               <h4 style="font-family: PKMN RBYGSC">{{ pokemon.name }}</h4>
             </div>
-            <!-- </template> -->
           </div>
         </div>
       </div>
@@ -43,9 +41,6 @@
   background-attachment: fixed;
   background-position: center center;
 }
-/* .section-heading {
-  color: rgb(248, 204, 8);
-} */
 </style>
 
 <script>

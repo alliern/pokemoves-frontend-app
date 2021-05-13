@@ -1,6 +1,5 @@
 <template>
   <div class="profile">
-    <!-- <section class="party-icons" id="team"> -->
     <div class="container">
       <div class="text-center">
         <h1 style="font-family: PKMN RBYGSC; margin-top: 20px" class="section-heading">{{ user.username }}'s Party</h1>

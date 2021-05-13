@@ -49,7 +49,6 @@
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 30px;
-  /* margin-bottom: 30px; */
 }
 </style>
 

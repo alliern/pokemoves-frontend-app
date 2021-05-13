@@ -1,6 +1,5 @@
 <template>
   <div class="users-index">
-    <!-- <br /> -->
     <img
       style="margin-top: 20px"
       class="index-img"
@@ -14,7 +13,6 @@
     <input type="search" style="center; font-size: 20px;" placeholder="search..." v-model="filterInput" />
     <h6 style="font-family: PKMN RBYGSC">Search by username</h6>
     <div class="show-card" style="center">
-      <!-- <div class="card-body" v-for="move in users" v-bind:key="move.id"> -->
       <div class="card-body" v-for="user in filterBy(users, filterInput)" v-bind:key="user.id">
         <router-link v-bind:to="`users/${user.id}`">
           <h2 style="font-family: PKMN RBYGSC">{{ user.username }}</h2>
@@ -37,7 +35,6 @@
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 30px;
-  /* margin-bottom: 30px; */
 }
 </style>
 

@@ -52,15 +52,6 @@
     <footer class="footer py-4">
       <div class="row align-items-center">
         <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
-        <!-- <div class="col-lg-4 my-3 my-lg-0">
-          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-        </div> -->
-        <!-- <div>
-          <a class="mr-3" href="#!">Privacy Policy</a>
-          <a href="#!">Terms of Use</a>
-        </div> -->
       </div>
     </footer>
   </div>
@@ -68,25 +59,11 @@
 
 <style>
 #app {
-  /* margin-top: 100px; */
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
   font-family: "PKMN RBYGSC";
   font-size: 25px;
   text-align: center;
   color: #2c3e50;
-  /* margin-left: 25px;
-  margin-right: 25px; */
 }
-
-/* body {
-  background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no repeat;
-} */
 body {
   background-image: url("https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg");
   background-size: 1550px;

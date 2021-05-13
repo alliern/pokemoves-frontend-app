@@ -12,7 +12,7 @@
     <h6 style="font-family: PKMN RBYGSC">Search by name, region, or type</h6>
 
     <h1></h1>
-    <!-- <h1 style="font-family: PKMN RBYGSC">All Pokemon:</h1> -->
+
     <br />
 
     <div class="row row-cols-1 row-cols-sm-3 g-4">
